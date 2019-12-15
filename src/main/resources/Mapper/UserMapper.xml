@@ -7,4 +7,8 @@
     <select id="findById" parameterType="int" resultType="edu.pojo.User">
         select * from user where id = #{id}
     </select>
+
+    <insert id="insertUser" parameterType="edu.pojo.User">
+        insert INTO User (name, age) values(#{name}, #{age})
+    </insert>
 </mapper>

@@ -17,9 +17,6 @@
             </dataSource>
         </environment>
     </environments>
-    <properties>
-
-    </properties>
     <!-- mapping文件路径配置 -->
     <mappers>
         <mapper resource="mapper/UserMapper.xml"/>

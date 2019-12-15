@@ -26,9 +26,17 @@ public class UserTest {
         //创建session实例
         SqlSession session = sqlMapper.openSession();
         //传入参数查询，返回结果
-        User user=session.selectOne("findById",1);
+        User user = session.selectOne("findById",1);
         //输出结果
         System.out.println(user.toString());
+        User u = new User();
+        u.setAge(13);
+        u.setName("zhangsan");
+        System.out.println(u.toString());
+        int n = session.insert("insertUser", u);
+        System.out.println(n);
+        //手动提交事务
+        session.commit();
         //关闭session
         session.close();
 
